@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #333333;
+}
+.toggle_container{
+    display: block;
+    background-color:#545455;
+    padding: .3rem;
+    width: 100px;
+    border-radius: 50px;
+    margin: 10% auto;
+    cursor: pointer;
+    position: relative;
+    transition: all  .6s ease-in-out;
+}
+.rounded_btn {
+    height: 30px;
+    width: 30px;
+    background-color: #fafffd;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: all .6s ease-in-out;
+}
+
+input{
+    display: none;
+}
+
+
+input:checked ~ .toggle_container >.rounded_btn{
+    transform: translateX(200%);
+    
+}
+
+input:checked ~ .toggle_container {
+    background-color: #6739e8;
+}
